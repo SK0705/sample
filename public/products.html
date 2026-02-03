@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Steel & Iron Traders</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">Steel & Iron Traders</div>
+      <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search products..." id="searchInput">
+        <button class="search-btn">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="products.html" class="nav-link active">Products</a>
+    <a href="cart.html" class="nav-link">Cart <span class="cart-badge" id="cart-count">0</span></a>
+  </nav>
+
+  <section class="products-header">
+    <div class="products-header-content">
+      <h1>Our Premium Products</h1>
+      <p>High-quality steel and iron materials for your industrial needs</p>
+    </div>
+  </section>
+
+  <main class="products-section">
+    <aside class="filters-panel">
+      <h3>Filters</h3>
+      <div class="filter-group">
+        <h4>Category</h4>
+        <label><input type="checkbox" value="iron-bars"> Iron Bars</label>
+        <label><input type="checkbox" value="steel-plates"> Steel Plates</label>
+        <label><input type="checkbox" value="rods"> Rods</label>
+      </div>
+      <div class="filter-group">
+        <h4>Price Range</h4>
+        <input type="range" min="0" max="500" value="500" class="price-range">
+        <p class="price-display">₹0 - ₹500/kg</p>
+      </div>
+      <button class="btn btn-secondary">Reset Filters</button>
+    </aside>
+
+    <div class="products-grid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-image">
+          <div class="image-placeholder">🏭</div>
+          <div class="product-badge">Popular</div>
+        </div>
+        <div class="product-info">
+          <h3>Iron Bar – 10mm</h3>
+          <div class="product-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(125 reviews)</span>
+          </div>
+          <p class="product-description">Premium quality 10mm iron bars suitable for construction and industrial applications.</p>
+          <div class="product-specs">
+            <span>Diameter: 10mm</span>
+            <span>Grade: A+</span>
+          </div>
+          <div class="product-footer">
+            <div class="price-section">
+              <span class="price">₹55</span>
+              <span class="unit">/kg</span>
+            </div>
+            <button class="btn btn-sm btn-primary" onclick="addToCart('Iron Bar 10mm', 55, this)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-image">
+          <div class="image-placeholder">📦</div>
+          <div class="product-badge">New</div>
+        </div>
+        <div class="product-info">
+          <h3>Steel Plate – 5mm</h3>
+          <div class="product-rating">
+            <span class="stars">★★★★☆</span>
+            <span class="rating-count">(98 reviews)</span>
+          </div>
+          <p class="product-description">Durable steel plates perfect for industrial machinery and structural work.</p>
+          <div class="product-specs">
+            <span>Thickness: 5mm</span>
+            <span>Grade: B+</span>
+          </div>
+          <div class="product-footer">
+            <div class="price-section">
+              <span class="price">₹75</span>
+              <span class="unit">/kg</span>
+            </div>
+            <button class="btn btn-sm btn-primary" onclick="addToCart('Steel Plate 5mm', 75, this)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-image">
+          <div class="image-placeholder">🔩</div>
+        </div>
+        <div class="product-info">
+          <h3>Steel Rod – 12mm</h3>
+          <div class="product-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(156 reviews)</span>
+          </div>
+          <p class="product-description">Reinforced steel rods designed for heavy-duty construction projects.</p>
+          <div class="product-specs">
+            <span>Diameter: 12mm</span>
+            <span>Grade: A</span>
+          </div>
+          <div class="product-footer">
+            <div class="price-section">
+              <span class="price">₹65</span>
+              <span class="unit">/kg</span>
+            </div>
+            <button class="btn btn-sm btn-primary" onclick="addToCart('Steel Rod 12mm', 65, this)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-image">
+          <div class="image-placeholder">⚙️</div>
+          <div class="product-badge">Sale</div>
+        </div>
+        <div class="product-info">
+          <h3>Iron Angle – 50x50mm</h3>
+          <div class="product-rating">
+            <span class="stars">★★★★☆</span>
+            <span class="rating-count">(87 reviews)</span>
+          </div>
+          <p class="product-description">Structural iron angles for framework and support structures.</p>
+          <div class="product-specs">
+            <span>Size: 50x50mm</span>
+            <span>Grade: B</span>
+          </div>
+          <div class="product-footer">
+            <div class="price-section">
+              <span class="price">₹48</span>
+              <span class="unit">/kg</span>
+              <span class="discount">-15%</span>
+            </div>
+            <button class="btn btn-sm btn-primary" onclick="addToCart('Iron Angle 50x50mm', 48, this)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card">
+        <div class="product-image">
+          <div class="image-placeholder">🛠️</div>
+        </div>
+        <div class="product-info">
+          <h3>Steel Channel – 75mm</h3>
+          <div class="product-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(142 reviews)</span>
+          </div>
+          <p class="product-description">Industrial-grade steel channels for complex structural applications.</p>
+          <div class="product-specs">
+            <span>Width: 75mm</span>
+            <span>Grade: A+</span>
+          </div>
+          <div class="product-footer">
+            <div class="price-section">
+              <span class="price">₹85</span>
+              <span class="unit">/kg</span>
+            </div>
+            <button class="btn btn-sm btn-primary" onclick="addToCart('Steel Channel 75mm', 85, this)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card">
+        <div class="product-image">
+          <div class="image-placeholder">📐</div>
+          <div class="product-badge">Popular</div>
+        </div>
+        <div class="product-info">
+          <h3>Iron Flat – 40x10mm</h3>
+          <div class="product-rating">
+            <span class="stars">★★★★☆</span>
+            <span class="rating-count">(110 reviews)</span>
+          </div>
+          <p class="product-description">Flat iron bars ideal for gates, railings, and decorative applications.</p>
+          <div class="product-specs">
+            <span>Size: 40x10mm</span>
+            <span>Grade: B+</span>
+          </div>
+          <div class="product-footer">
+            <div class="price-section">
+              <span class="price">₹45</span>
+              <span class="unit">/kg</span>
+            </div>
+            <button class="btn btn-sm btn-primary" onclick="addToCart('Iron Flat 40x10mm', 45, this)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Steel & Iron Traders. All rights reserved.</p>
+  </footer>
+
+  <script src="js/cart.js"></script>
+</body>
+</html>

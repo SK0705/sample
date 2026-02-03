@@ -1,0 +1,1 @@
+<?php $conn=new mysqli('localhost','root','','sj_creative_labs'); ?>
